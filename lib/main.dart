@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ghost_vpn_site/presentation/screens/landing_screen.dart';
+import 'package:ghost_vpn_site/presentation/screens/landing_screens/landing_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,7 +7,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
