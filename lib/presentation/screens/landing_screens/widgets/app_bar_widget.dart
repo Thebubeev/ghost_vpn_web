@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:ghost_vpn_site/config/utils/constants/constants.dart';
 
 class AppBarWidget extends StatelessWidget with PreferredSizeWidget {
-  final TextStyle textStyle;
+  final bool isLanding;
   const AppBarWidget({
     super.key,
-    required this.textStyle,
+    required this.isLanding,
   });
 
   @override
@@ -12,8 +13,9 @@ class AppBarWidget extends StatelessWidget with PreferredSizeWidget {
     return AppBar(
         backgroundColor: Colors.black,
         centerTitle: true,
+        automaticallyImplyLeading: isLanding ? false : true,
         elevation: 0,
-        title: Text('Добро пожаловать в GhostVPN', style: textStyle));
+        title: const Text('GhostVPN', style: defaultWhiteWebTextStyle));
   }
 
   @override
